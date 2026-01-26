@@ -1,0 +1,833 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                        <style>
+    .centro { width: 100%; margin-left: auto; margin-right: auto; } 
+    .position-br { position: absolute; bottom: 0; right: 0; }
+    .position-bl { position: absolute; bottom: 0; left: 0; }
+    .app-makro { display: block; max-width: 100%; margin: 0 auto; }
+    .app-makro-driver { margin: 3em auto; }
+    .app-makro-driver img { display: block; max-width: 100%; }
+    .app-makro-driver .titulo { font-family: Avenir-Light;color: #878787; font-size: 18px; }
+    .app-makro-driver .titulo span { font-family: Avenir-Black; color: #878787;font-size: 18px; }
+    .app-makro-driver .descripcion { font-family: Avenir-Light;color: #878787; font-size: 14px; margin-top: 20px; }
+    .app-makro-driver .btn-mas { font-family: Avenir-Light;color: #ff0000; font-size: 14px; margin-top: 5px; text-align: right;display: block; }
+    .app-makro-driver hr { border-top: 1px solid #d8d7d7; }
+    .app-makro-btop { display: block; max-width: 100%; }
+    .app-makro-makromail { background-color: #7f0d11; padding-bottom: 0; }
+    .app-makro-makromail h3 { font-weight: 300;color: #ff2329;font-family: Avenir-Black;font-size: 3em; margin-bottom: 25px; margin-top: 25px; }
+    .app-makro-makromail .issuu { border:none;width:100%;height:80vw; }
+    .app-makro-bbottom { display: block; max-width: 100%; display: none; }
+    .app-makro-videos { background-color: #ff2329; margin-top: 0; }
+    .app-makro-videos h3 { font-weight: 300;color: #F9DC28;font-family: Avenir-Black;font-size: 3em; margin-bottom: 25px; margin-top: 25px; }
+    .app-makro-videos .embed-responsive-item { padding: 1em; margin-top: 3rem; }
+    .app-makro-videos .btn-blanco { background:#fff;color:#ff2329;font-family: Avenir-Black;font-size: 28px;padding: 6px;display: block;margin: 1.25em auto 0;max-width: 250px;text-align: center;border-radius: 30px;text-decoration: none; cursor: hand; }
+    .app-makro-videos .btn-yellow { color:#F9DC28;font-family: Avenir-Black;font-size: 2em;padding: 6px;display: block; margin:0.5em 0; text-align: center; text-decoration: none; cursor: hand; }
+    .landing-makro-app { margin-top: 1em; }
+    .landing-makro-app p { font-size:1.5em; margin-top:1em; margin-bottom:1.5em; }
+    .landing-makro-app a.suscribase { background-color:#920706; color: #ffffff; font-size: 0.75em; margin-top: 16px; font-weight: bold; }
+    .landing-makro-app a.suscribase:hover { text-decoration: underline; }
+    .landing-makro-app .thumbnail { border: 1px solid transparent; }
+    .landing-makro-app .thumbnail p { font-size:1.25em;margin-top:5px;margin-bottom:5px;text-align:center;font-weight:700;color:#848484;} 
+    .landing-makro-app .thumbnail p.titulo { height: 60px;} 
+    .landing-makro-app .thumbnail p.vigencia { font-size:1em;}
+    .landing-makro-app .thumbnail p.vigencia span { color:#ea0000; }
+    .landing-makro-app .thumbnail .img-borders { width: 100%; height: auto; border-top: 2px solid #ea0000; border-bottom: 2px solid #ea0000; background-color: #ffffff; padding: 4px 0; }
+    .landing-makro-app .thumbnail .img-container { width: 100%; height: auto;}
+    .landing-makro-app .thumbnail button {color:#ffff; background-color:#ea0000; border-color:#ea0000; width:100%; font-size:1.125em;}
+    .landing-makro-app .thumbnail:hover button {text-decoration: underline;}
+    .landing-makro-app .thumbnail:active button {text-decoration: underline;}
+    .landing-makro-app .thumbnail:hover { border: 1px solid transparent; }
+    .landing-makro-app .thumbnail:active { border: 1px solid transparent; }
+    .landing-makro-app .thumbnail:hover img { opacity: 0.3; background-color: #000000; }
+    .landing-makro-app .thumbnail:active img { opacity: 0.3; }
+    .landing-makro-app .thumbnail .img-container{background:#ea0000;}
+    .landing-makro-app .thumbnail .img-container img{margin-left:auto; margin-right:auto; opacity:1;-webkit-transition:.3s ease-in-out;transition:.3s ease-in-out}
+    .landing-makro-app .thumbnail:hover .img-container img{opacity:.5}
+    .landing-makro-app .thumbnail:active .img-container img{opacity:.5}
+    .landing-makro-app .oculto { display: none; }
+    .landing-makro-app .stores { margin-top: 2.5em; }
+    .landing-makro-app h3 { font-weight: 300;color: #afafaf; font-family: Avenir-Black; font-size: 2.5em; margin-bottom: 1em; margin-top: 1em; }
+    .landing-makro-app .red-icons { margin-bottom: 2em; }
+    .landing-makro-app .red-icons p { font-weight: 300;color: #ff2329; font-family: Avenir-Black;font-size: 1.5em; margin-bottom: 25px; margin-top: 25px;  text-align: center; line-height: 1.25em;}
+    .landing-makro-app .app-makro-videos h3 { font-weight: 300;color: #F9DC28;font-family: Avenir-Black;font-size: 3em; margin-bottom: 0; margin-top: 25px; }
+    .landing-makro-app .app-makro-videos .cinta { position: absolute; width: 100%; margin: 0 auto; bottom: calc(100% - 3em); }
+    .landing-makro-app .app-makro-videos .video-yt { margin-top: 0; }
+    .landing-makro-app .social-media { background-color: #7f0d11; color: #ffffff; }
+    .landing-makro-app .social-media p { font-family: Avenir-Black; color: #ffffff; font-size: 18px; display: inline-block; }
+    .landing-makro-app .social-media ul { display: inline-block; margin: 1.5em 0; padding: 0; list-style-type: none; }
+    .landing-makro-app .social-media ul li { display: inline-block; margin-right: 3px; font-family: Avenir-Black; color: #ffffff; font-size: 22px; }
+    .landing-makro-app .social-media ul li img { width: 32px; }
+    .landing-makro-app .social-media ul li.text { margin-left: 6px; }
+    .landing-makro-app .app-makro-makromail .issuu { border:none; width:100%; height:30vw; }
+    .landing-makro-app .bloque-imagenes .thumb{margin-bottom:1em;border:1px solid #c8c4c4;border-radius:10px;overflow:hidden;width:234px;margin:0 auto;height:473.98px;-webkit-box-shadow:10px 10px 5px -6px rgba(204,204,204,1);-moz-box-shadow:10px 10px 5px -6px rgba(204,204,204,1);box-shadow:10px 10px 5px -6px rgba(204,204,204,1)}
+    .landing-makro-app .bloque-imagenes .thumb p {font-weight:600;color:#afafaf;font-family:Avenir-Light;font-size:1.375em;line-height:1.375em;text-align:center;padding:0 12px;margin:.5em 0;}
+.landing-makro-app .bloque-imagenes .thumb p b {color:#7c7c7c;}
+    .iframe-16-9 {
+        position: relative;
+        padding-bottom: 75.5%;
+        padding-top: 35px;
+        height: 0;
+        overflow: hidden;
+    }
+    .iframe-16-9  iframe {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    @media only screen and (max-device-width : 320px) {
+        .iframe-16-9 {
+            padding-bottom: 365%;
+        }
+    }
+    @media only screen and (min-device-width : 321px) and (max-device-width : 375px) {
+        .iframe-16-9 {
+            padding-bottom: 300%;
+        }
+    }
+    @media only screen and (min-device-width : 376px) and (max-device-width : 425px) {
+        .iframe-16-9 {
+            padding-bottom: 285%;
+        }
+    }
+    @media only screen and (min-device-width : 426px) and (max-device-width : 768px) {
+        .iframe-16-9 {
+            padding-bottom: 80%;
+        }
+    }
+    @media only screen and (min-device-width : 769px) and (max-device-width : 1024px) {
+        .iframe-16-9 {
+            padding-bottom: 70%;
+        }
+    }
+    @media only screen and (min-device-width : 1025px) and (max-device-width : 1440px) {
+        .iframe-16-9 {
+            padding-bottom: 65%;
+        }
+    }
+    @media only screen and (min-device-width : 1441px) and (max-device-width : 2560px) {
+        .iframe-16-9 {
+            padding-bottom: 65%;
+        }
+    }
+    @media (max-width: 767px) {
+        .set-paddings-15 { padding-left: 15px; padding-right: 15px; }
+        .position-br { position: relative; }
+        .position-bl { position: relative; }
+        .app-makro-videos { margin-top: 1em; }
+        .app-makro-driver { margin: 1.5em auto; }
+        .app-makro-makromail h3 { font-size: 2em; margin-bottom: 16px; margin-top: 16px; }
+        .app-makro-videos h3 { font-size: 2em; margin-bottom: 16px; margin-top: 16px; }
+        .app-makro-videos .btn-blanco { font-size: 10px; margin: 20px auto 0; }
+        .app-makro-videos .btn-yellow { font-size: 14px; margin: 0.25em auto 0; }
+        .landing-makro-app a { cursor: hand; }
+        .landing-makro-app .stores div { margin: 1em 0; }
+        .landing-makro-app h3 { font-size: 1.8em; margin-bottom: 1em; margin-top: 1em; }
+        .landing-makro-app .red-icons p { font-size: 1.25em; margin-bottom: 10px; margin-top: 10px; }
+        .landing-makro-app .bloque-imagenes .thumb { margin-bottom: 1em;}
+        .landing-makro-app .app-makro-makromail .issuu { border:none; width:100%; height:100vw; }
+        .landing-makro-app .app-makro-videos .video-yt { margin-top: 0; }
+        .landing-makro-app .app-makro-videos .cinta { width: 80%; bottom: calc(100% - 1.25em); left: 50%; transform: translate(-50%, 0); }
+        .landing-makro-app .social-media ul li.text { margin-top: 0.5em; }
+    }
+</style>
+<div class="landing-makro-app catalogo">
+    <div class="row">
+            <div class="col-sm-12">
+                    <p class="text-center">Descubra por qué con Makro todos tienen más opciones para ahorrar en 22 tiendas a nivel nacional</p>
+            </div>
+    </div>
+    <!--thumbnails-->
+    <div class="row">
+
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/diasiniva2022" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/100322-Makro-Thumbnail-DiaSinIVA-Volante.jpg" alt="Ofertas Día sin IVA" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Día sin IVA</p>
+                <p class="vigencia"><span>Válido el: </span>01-04-2022</p>
+                <button href="https://www.makro.com.co/diasiniva2022" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div> 
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/ofertasfamilia" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/090223-Makro-Thumbnail-Familia-V6.jpg" alt="Ofertas de la semana" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Ofertas de la Semana</p>
+                <p class="vigencia"><span>Válido hasta: </span>16-02-2023</p>
+                <button href="https://www.makro.com.co/ofertasfamilia" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div> 
+
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/ofertashoreca" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/090223-Makro-Thumbnail-Negocios-V6.png" alt="Ofertas HORECA" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Ofertas para su Negocio</p>
+                <p class="vigencia"><span>Válido hasta: </span>16-02-2023</p>
+                <button href="https://www.makro.com.co/ofertashoreca" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/ofertas-tendero" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/180222-Makro-Thumbnail-Tendero.jpg" alt="Ofertas Tenderos" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Ofertas Tenderos</p>
+                <p class="vigencia"><span>Válido hasta: </span>24-02-2022</p>
+                <button href="https://www.makro.com.co/ofertas-tendero" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/cyber-week" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/191022-Makro-Thumbnail-Exp-CyberWeek.jpg" alt="Cyber Week Makro" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Cyber Week</p>
+                <p class="vigencia"><span>Válido hasta: </span>27-10-2022</p>
+                <button href="https://www.makro.com.co/cyber-week" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/black-weekend#modal" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/151222-Makro-Thumbnail-Lan-BlackWeekend.jpg" alt="Black Weekend" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Black Weekend</p>
+                <p class="vigencia"><span>Válido el: </span>18-12-2021</p>
+                <button href="https://www.makro.com.co/black-weekend#modal" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/volante-urban-market" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/volant_urban_market.png" alt="Volante Urban Market" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Ofertas Apertura Urban Market</p>
+                <p class="vigencia"><span>Válido hasta: </span>22-10-2020</p>
+                <button href="https://www.makro.com.co/volante-urban-market" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div> 
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/especial-de-aseo" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/050123-Makro-Thumbnail-EspecialAseo.jpg" alt="Ofertas Aseo" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial Aseo</p>
+                <p class="vigencia"><span>Válido hasta: </span>19-01-2023</p>
+                <button href="https://www.makro.com.co/especial-de-aseo" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/cuidado-personal" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/190123-Makro-Thumbnail-cuidado-personal-v1.jpg" alt="Ofertas Aseo" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Cuidado Personal</p>
+                <p class="vigencia"><span>Válido hasta: </span>02-02-2023</p>
+                <button href="https://www.makro.com.co/cuidado-personal" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://makro.com.co/especialHoreca" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/251122-Makro-Thumbnail-MundoHoreca.jpg" alt="Mundo Horeca" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Mundo Horeca</p>
+                <p class="vigencia"><span>Válido hasta: </span>08-12-2022</p>
+                <button href="https://makro.com.co/especialHoreca" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+     <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://makro.com.co/especial-panaderia" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/especial_panaderia.jpg" alt="Especial Panadería" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial Panadería</p>
+                <p class="vigencia"><span>Válido hasta: </span>16-05-2021</p>
+                <button href="https://makro.com.co/especial-panaderia" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://makro.com.co/especial-llantas" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/especial_llantas.jpg" alt="Especial Llantas" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial Llantas</p>
+                <p class="vigencia"><span>Válido hasta: </span>24-04-2021</p>
+                <button href="https://makro.com.co/especial-llantas" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://makro.com.co/sanjuan" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/041022-Makro-Thumbnail-SanJuan.jpg" alt="SanJuan" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">San Juan</p>
+                <p class="vigencia"><span>Válido hasta: </span>12-10-2022</p>
+                <button href="https://makro.com.co/sanjuan" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/makro.php?id=especial-mama" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/280422-Makro-Thumbnail-EspecialMadres.jpg" alt="Mundo mama" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial Día de la Madre</p>
+                <p class="vigencia"><span>Válido hasta: </span>18-05-2022</p>
+                <button href="https://www.makro.com.co/makro.php?id=especial-mama" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://makro.com.co/especial-mascotas" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/130223-Makro-Thumbnail-EspecialMascotas.jpg" alt="Especial Mascotas" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial Mascotas</p>
+                <p class="vigencia"><span>Válido hasta: </span>22-02-2023</p>
+                <button href="https://makro.com.co/especial-mascotas" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://makro.com.co/especial-de-dotacion" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/010223-Makro-Thumbnail-EspecialDotacion.jpg" alt="Especial de Dotación" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial de Dotación</p>
+                <p class="vigencia"><span>Válido hasta: </span>01-03-2023</p>
+                <button href="https://makro.com.co/especial-de-dotacion" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://tienda.makro.com.co/" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/161122-Makro-Thumbnail-Lan-Campeones.jpg" alt="Especial Campeones" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial Campeones</p>
+                <p class="vigencia"><span>Válido desde: </span> 16-11-2022</p>
+                <button href="https://tienda.makro.com.co/" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/amor-y-amistad" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/092021_Thumbnail_AmoryAmistad.jpg" alt="Liquidación Makro" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial de Amor y Amistad</p>
+                <p class="vigencia"><span>Válido hasta: </span>20-09-2021</p>
+                <button href="https://www.makro.com.co/amor-y-amistad" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://makro.com.co/cuponera-reventon" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/010223-Makro-Thumbnail-Lan-Reventon.png" alt="Cuponera Reventón" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Reventón de Descuentos</p>
+                <p class="vigencia"><span>Válido el: </span>05-02-2023</p>
+                <button href="https://makro.com.co/cuponera-reventon" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class=" thumbnail" =""="" href="https://makro.com.co/economakro" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/060223-Makro-Thumbnail-Lan-Economakro.jpg" alt="Economakro" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Economakro</p>
+                <p class="vigencia"><span>Válido el: </span>09-02-2023</p>
+                <button href="https://makro.com.co/economakro" target="_blank" class="btn btn-default">Ver más</button>
+            
+        </a>
+    </div>
+    <div class="col-sm-3 oculto">
+    <a class=" thumbnail" =""="" href="https://makro.com.co/economakro" target="_self">
+            </a><a class="thumbnail" href="https://makro.com.co/especial-muebles" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/230821_Makro_Thumbnail_mueble.jpg" alt="Ofertas Muebles" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial de Muebles</p>
+                <p class="vigencia"><span>Válido hasta: </span>30-08-2021</p>
+                <button href="https://makro.com.co/especial-muebles" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/especial-halloween" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/300922-Makro-Thumbnail-Halloween.jpg" alt="Ofertas Halloween" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial de Halloween</p>
+                <p class="vigencia"><span>Válido hasta: </span>02-11-2022</p>
+                <button href="https://www.makro.com.co/especial-halloween" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/mundo-saludable" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/210422-Makro-Thumbnail-Mundo-Saludable.jpg" alt="Oferta de Carnes" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial Mundo Saludable</p>
+                <p class="vigencia"><span>Válido hasta: </span>27-04-2022</p>
+                <button href="https://www.makro.com.co/mundo-saludable" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://makro.com.co/especial-padres" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/080622-Makro-Thumbnail-Dia-Del-Padre.png" alt="Especial Galletero" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial Papás</p>
+                <p class="vigencia"><span>Válido hasta: </span>22-06-2022</p>
+                <button href="https://makro.com.co/especial-padres" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/ofertascuaresma" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/010422-Makro-Thumbnail-Cuaresma.jpg" alt="Ofertas Cuaresma" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial Cuaresma</p>
+                <p class="vigencia"><span>Válido hasta: </span>17-04-2021</p>
+                <button href="https://www.makro.com.co/ofertascuaresma" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/especial-de-navidad" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/091222-Makro-Thumbnail-EspecialNavidad4.png" alt="Oferta de Carnes" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial Navidad</p>
+                <p class="vigencia"><span>Válido hasta: </span>15-12-2022</p>
+                <button href="https://www.makro.com.co/especial-de-navidad" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+
+       <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/ofertas-cali" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/THUMBNAIL_feriadecali_2021.png" alt="Oferta Feria de Cali" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial Feria de Cali</p>
+                <p class="vigencia"><span>Válido hasta: </span>31-12-2021</p>
+                <button href="https://www.makro.com.co/ofertas-cali" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+
+       <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/hotmania" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/250322-Makro-Thumbnail-Hotmania-Hotsale.jpg" alt="Hotmanía" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial HOTMANIA</p>
+                <p class="vigencia"><span>Válido hasta: </span>31-03-2022</p>
+                <button href="https://www.makro.com.co/hotmania" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+
+        <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/especial-navidad" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/221221-THUMBNAIL_ESPECIAL_CARNE-DE-CERDO.jpg" alt="Oferta de Carnes" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial Carne de Cerdo</p>
+                <p class="vigencia"><span>Válido hasta: </span>31-12-2021</p>
+                <button href="https://www.makro.com.co/especial-navidad" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+
+    <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/especial-congelados" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/010223-Makro-Thumbnail-EspecialCongelados.jpg" alt="Oferta de Carnes" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Especial Congelados</p>
+                <p class="vigencia"><span>Válido hasta: </span>08-02-2023</p>
+                <button href="https://www.makro.com.co/especial-congelados" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+
+
+    <div class="col-sm-3 oculto">
+            <a class="thumbnail" href="https://www.makro.com.co/microvolante" target="_self">
+                <div class="img-borders">
+                    <div class="img-container">
+                        <img src="https://content.makrovirtual.com/landing-catalogos/100223-Makro-Thumbnail-MicroCatalogo.png" alt="Micro Volante" class="img-responsive">
+                    </div>
+                </div>
+                <p class="titulo">Micro Volante</p>
+                <p class="vigencia"><span>Válido hasta: </span>23-02-2023</p>
+                <button href="https://www.makro.com.co/microvolante" target="_blank" class="btn btn-default">Ver más</button>
+            </a>
+        </div>
+
+
+
+
+
+<div class="col-sm-3">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/27-01-2026MARTES DE MARCAS PROPIAS.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/MartesMarcasPropiasDic2025.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Martes De Marcas Propias</p>
+        <p class="vigencia"><span>Válido: </span>27-01-2026</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/27-01-2026MARTES DE MARCAS PROPIAS.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/21-01-26MIERCOLES DE FRUVER Y PULPAS .pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/MiercolesPlazaDic2025.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Miércoles De Plaza</p>
+        <p class="vigencia"><span>Válido: </span>21-01-2026</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/21-01-26MIERCOLES DE FRUVER Y PULPAS .pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/21-01-26JUEVES DE GRANOS.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/JuevesGranosDic2025.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Jueves De Plaza</p>
+        <p class="vigencia"><span>Válido: </span>22-01-2026</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/21-01-26JUEVES DE GRANOS.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/22-01-2026VIERNES DE LICORES.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/ViernesLicoresDic2025.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Viernes De Licores</p>
+        <p class="vigencia"><span>Válido: </span>23-01-2026</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/22-01-2026VIERNES DE LICORES.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/21-01-2026VIERNESYSABADODECHARCUTERIA.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/ViernesCharcuteriaDic2025.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Viernes De Charcutería</p>
+        <p class="vigencia"><span>Válido: </span>23-01-2026</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/21-01-2026VIERNESYSABADODECHARCUTERIA.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/21-01-2026VIERNESYSABADODECHARCUTERIA.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/SabadoCharcuteriaDic2025.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Sábado De Charcutería</p>
+        <p class="vigencia"><span>Válido: </span>24-01-2026</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/21-01-2026VIERNESYSABADODECHARCUTERIA.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/23-01-2026SABADO DE ASADOS.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/SabadosAsadosDic2025.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Sábado De Asado</p>
+        <p class="vigencia"><span>Válido: </span>24-06-2026</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/-01-2026SABADO DE ASADOS.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/21-01-2026DOMINGO DE FRUVER Y PULPAS.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/DomingoPlazaDic2025.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Domingo De Fruver y Pulpas</p>
+        <p class="vigencia"><span>Válido: </span>25-01-2026</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/21-01-2026DOMINGO DE FRUVER Y PULPAS.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/23-12-2025Ofertas Temporda VII.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/23-12-2025Ofertas Temporda VII.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Temporada VII</p>
+        <p class="vigencia"><span>Válido del: </span>25-12-2025 al 31-12-2025</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/23-12-2025Ofertas Temporda VII.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/02-12-25ElDorado.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/02-12-25ElDorado.jpeg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas El Dorado</p>
+        <p class="vigencia"><span>Válido del: </span>01-12-2025 al 31-12-2025</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/02-12-25ElDorado.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/28-11-2025Jugueteria.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/28-11-2025JugueteriaAjus.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Juguetería</p>
+        <p class="vigencia"><span>Válido del: </span>01-12-2025 al 31-12-2025</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/28-11-2025Jugueteria.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/26-11-2025CODIGOS ANCHETAS MAKRO NAVIDAD.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/26-11-2025AnchetasMakroAjus.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Anchetas Makro</p>
+        <p class="vigencia"><span>Válido del: </span>01-12-2025 al 31-12-2025</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/26-11-2025CODIGOS ANCHETAS MAKRO NAVIDAD.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/26-11-2025CODIGOS DULCES MAKRO NAVIDAD.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/20-11-2025CARRUSEL-IMPORTADOS.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Dulces Antojos</p><p class="vigencia" style="box-sizing: border-box; margin: 5px 0px; font-family: Avenir-Light; font-size: 1em; font-weight: 700; line-height: 1.33; color: rgb(132, 132, 132); overflow-wrap: break-word; letter-spacing: -0.5px; text-align: center;"><span style="box-sizing: border-box; color: rgb(234, 0, 0);">Válido hasta:<span>&nbsp;</span></span>31-12-2025</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/26-11-2025CODIGOS DULCES MAKRO NAVIDAD.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/20-11-2025CODIGOS-IMPORTADOS-1MAKRO-TEMPORADA-1.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/20-11-2025CARRUSEL-IMPORTADOS.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Importados Makro</p>
+        <p class="vigencia"><span>Válido hasta: </span>31-12-2025</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/20-11-2025CODIGOS-IMPORTADOS-1MAKRO-TEMPORADA-1.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/01-12-2025CODIGOS DAIRY MAKRO NAVIDAD.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/20-11-2025CARRUSEL-IMPORTADOS.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Pavos, Cenas  navideñas y Quesos</p>
+        <p class="vigencia"><span>Válido hasta: </span>31-12-2025</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/01-12-2025CODIGOS DAIRY MAKRO NAVIDAD.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/11-12-2025Horecaton12al18Dic.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/11-12-2025Horecaton12al18Dic.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Dota Tu Negocio</p>
+        <p class="vigencia"><span>Válido hasta: </span>18-12-2025</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/11-12-2025Horecaton12al18Dic.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/29-12-2025UniliverFAB.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/29-12-2025UniliverFAB.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Semana Unilever</p>
+        <p class="vigencia"><span>Válido hasta: </span>31-12-2025</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/29-12-2025UniliverFAB.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/16-12-25Cyber_days_makro.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/16-12-25Cyber_days_makro.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Cyber Days Unilever</p>
+        <p class="vigencia"><span>Válido hasta: </span>17-12-2025</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/16-12-25Cyber_days_makro.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/18-12-2025Ofertas EspecialNavidad.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/20-11-2025CARRUSEL-IMPORTADOS.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Dulces y Natillas</p>
+        <p class="vigencia"><span>Válido hasta: </span>23-12-2025</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/18-12-2025Ofertas EspecialNavidad.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/22-12-2025UniliverFAB.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/22-12-2025UniliverFAB.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Unilver FAB</p>
+        <p class="vigencia"><span>Válido hasta: </span>23-12-2025</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/22-12-2025UniliverFAB.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/23-12-2025LEGAL PAVOS.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/23-12-2025LEGAL PAVOS.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Oferta de Pavos</p>
+        <p class="vigencia"><span>Válido hasta: </span>31-12-2025</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/23-12-2025LEGAL PAVOS.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/08-01-2026MakroLiquidacion.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/08-01-2026MakroLiquidacion.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Liquidación</p>
+        <p class="vigencia"><span>Válido hasta: </span>09 al 15 Enero 2026</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/08-01-2026MakroLiquidacion.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/08-01-2026MakroAseo.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/08-01-2026MakroAseo.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Especial de Aseo</p>
+        <p class="vigencia"><span>Válido hasta: </span>09 al 19 Enero 2026</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/08-01-2026MakroAseo.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3 oculto">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/16-02-2026BacktoSchool.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/16-02-2026BacktoSchool.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Back To School</p>
+        <p class="vigencia"><span>Válido hasta: </span>16 al 22 Enero 2026</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/16-02-2026BacktoSchool.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+<div class="col-sm-3">
+     <a class="thumbnail" href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/23-01-2026PreciosFelices.pdf" target="_blank">
+        <div class="img-borders">
+             <div class="img-container">
+             <img src="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/23-01-2026PreciosFelices.jpg" alt="Micro Volante" class="img-responsive">
+             </div>
+        </div>
+        <p class="titulo">Ofertas Precios Felices</p>
+        <p class="vigencia"><span>Válido hasta: </span>23 al 29 Enero 2026</p>
+        <button href="https://mre-site-makro-colombia-images.azurewebsites.net/landing-condicionesofertas/23-01-2026PreciosFelices.pdf" target="_blank" class="btn btn-default">Ver más</button>
+    </a>
+</div>
+
+
+
+</div></div>                                                                                                                                                                                                                                                                                                                                                                     
